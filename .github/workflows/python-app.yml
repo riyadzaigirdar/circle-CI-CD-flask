@@ -32,7 +32,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Set enviroment variables
       run: |
-        echo 'export PYTHONPATH="src"' >> $BASH_ENV
+        export PYTHONPATH=src
     - name: Test with pytest
       run: |
         pytest
