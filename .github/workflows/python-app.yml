@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
@@ -33,3 +33,6 @@ jobs:
       run: |
         export PYTHONPATH=src
         pytest
+    - name: Deploy to server
+      run: |
+      
